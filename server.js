@@ -6,8 +6,8 @@ const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
 
 corsProxy.createServer({
-    originWhitelist: ['https://www.bloxstaking.com/', 'https://bloxinfra.site.strattic.io/', 'https://bloxinfra.preview.strattic.io'],
-    requireHeader: ['origin', 'x-requested-with', 'content-type', 'accept', ''],
+    originWhitelist: ['https://www.bloxstaking.com/', 'https://www.bloxstaking.com', 'https://bloxinfra.site.strattic.io/', 'https://bloxinfra.site.strattic.io', 'https://bloxinfra.preview.strattic.io/', 'https://bloxinfra.preview.strattic.io'],
+    requireHeader: ['origin', 'x-requested-with', 'content-type', 'accept'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, () => {
     console.log('Running CORS Anywhere on ' + host + ':' + port);
