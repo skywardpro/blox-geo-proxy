@@ -6,7 +6,7 @@ const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
 
 corsProxy.createServer({
-    originWhitelist: ['https://www.bloxstaking.com', 'https://bloxinfra.site.strattic.io', 'https://bloxinfra.preview.strattic.io'],
+    originWhitelist: ['https://www.bloxstaking.com', 'https://bloxinfra.site.strattic.io', 'https://bloxinfra.preview.strattic.io', 'https://ssv.network', 'https://ssv-network.preview.strattic.io', 'https://ssv-network.site.strattic.io', 'https://ssv-new.local'],
 //    requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, () => {
